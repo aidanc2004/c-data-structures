@@ -74,6 +74,16 @@ void print_stack(stack *st) {
     putchar('\n');
 }
 
+// if the stack is empty
+int is_empty(stack *st) {
+    return st->top == -1;
+}
+
+// if the stack is full
+int is_full(stack *st) {
+    return st->top + 1 == st->size;
+}
+
 // test the stack data structure
 void stack_test() {
     // create a new stack with size 5
@@ -102,6 +112,21 @@ void stack_test() {
     // print the stack
     printf("stack: ");
     print_stack(st);
+
+    // remove all elements from stack
+    pop(st);
+    pop(st);
+    pop(st);
+    pop(st);
+
+    printf("empty? %d\n", is_empty(st));
+
+    // add 5 elements to queue
+    for (int i = 0; i < stack_size(st); i++) {
+        push(st, i);
+    }
+
+    printf("full? %d\n", is_full(st));
 
     // free the stack when done
     free_stack(st);
