@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "stack.h"
+#include "queue.h"
 
 int main() {
-    stack_test();
+    queue_test();
 }
