@@ -85,12 +85,12 @@ int queue_size(queue *qu) {
 }
 
 // if the queue is empty
-int is_empty(queue *qu) {
+int queue_empty(queue *qu) {
     return qu->rear == -1;
 }
 
 // if the queue is full
-int is_full(queue *qu) {
+int queue_full(queue *qu) {
     return qu->rear+1 == qu->size;
 }
 

@@ -75,12 +75,12 @@ void print_stack(stack *st) {
 }
 
 // if the stack is empty
-int is_empty(stack *st) {
+int stack_empty(stack *st) {
     return st->top == -1;
 }
 
 // if the stack is full
-int is_full(stack *st) {
+int stack_full(stack *st) {
     return st->top + 1 == st->size;
 }
 
@@ -119,14 +119,14 @@ void stack_test() {
     pop(st);
     pop(st);
 
-    printf("empty? %d\n", is_empty(st));
+    printf("empty? %d\n", stack_empty(st));
 
     // add 5 elements to queue
     for (int i = 0; i < stack_size(st); i++) {
         push(st, i);
     }
 
-    printf("full? %d\n", is_full(st));
+    printf("full? %d\n", stack_full(st));
 
     // free the stack when done
     free_stack(st);

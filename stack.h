@@ -10,8 +10,8 @@ int peek(stack *st);
 void print_stack(stack *st);
 void free_stack(stack *st);
 int stack_size(stack *st);
-int is_empty(stack *st);
-int is_full(stack *st);
+int stack_empty(stack *st);
+int stack_full(stack *st);
 void stack_test();
 
 #endif
