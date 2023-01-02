@@ -1,6 +1,6 @@
 #include <stdio.h>
-#include "stack.h"
+#include "linked_list.h"
 
 int main() {
-    stack_test();
+    linked_list_test();
 }
